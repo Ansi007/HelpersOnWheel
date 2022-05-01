@@ -24,8 +24,8 @@
                             Sign Up
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Sign Up as Helper</a></li>
-                            <li><a class="dropdown-item" href="#">Sign Up as Seeker</a></li>
+                            <li><a class="dropdown-item" asp-page = "/SignUp/HelperSignUp">Sign Up as Helper</a></li>
+                            <li><a class="dropdown-item" asp-page = "/SignUp/SeekerSignUp">Sign Up as Seeker</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -34,18 +34,18 @@
                             Login
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Login as Helper</a></li>
-                            <li><a class="dropdown-item" href="#">Login as Seeker</a></li>
+                            <li><a class="dropdown-item" asp-page = "/Login/HelperLogin">Login as Helper</a></li>
+                            <li><a class="dropdown-item" asp-page = "/Login/SeekerLogin">Login as Seeker</a></li>
                         </ul>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="Home/Index">Home</a>
+                        <a class="nav-link" asp-page = "/Home/Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" aso-page = "/About/Index">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" asp-page = "/Contact/Index">Contact Us</a>
                     </li>
                 </ul>
             </div>
