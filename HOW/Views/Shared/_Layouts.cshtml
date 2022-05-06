@@ -10,7 +10,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Helpers On Wheel</a>
+            <a class="navbar-brand" asp-controller = "Home" asp-action = "Index">Helpers On Wheel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -24,8 +24,8 @@
                             Sign Up
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" asp-page = "/SignUp/HelperSignUp">Sign Up as Helper</a></li>
-                            <li><a class="dropdown-item" asp-page = "/SignUp/SeekerSignUp">Sign Up as Seeker</a></li>
+                            <li><a class="dropdown-item" asp-controller = "SignUp" asp-action = "HelperSignUp">Sign Up as Helper</a></li>
+                            <li><a class="dropdown-item" asp-controller = "SignUp" asp-action = "SeekerSignUp">Sign Up as Seeker</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -34,18 +34,18 @@
                             Login
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" asp-page = "/Login/HelperLogin">Login as Helper</a></li>
-                            <li><a class="dropdown-item" asp-page = "/Login/SeekerLogin">Login as Seeker</a></li>
+                            <li><a class="dropdown-item" asp-controller = "Login" asp-action = "HelperLogin">Login as Helper</a></li>
+                            <li><a class="dropdown-item" asp-controller = "Login" asp-action = "SeekerLogin">Login as Seeker</a></li>
                         </ul>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" asp-page = "/Home/Index">Home</a>
+                        <a class="nav-link" asp-controller = "Home" asp-action = "Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aso-page = "/About/Index">About</a>
+                        <a class="nav-link" asp-controller = "About" asp-action = "Index">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-page = "/Contact/Index">Contact Us</a>
+                        <a class="nav-link" asp-controller = "Contact" asp-action = "Index">Contact Us</a>
                     </li>
                 </ul>
             </div>
