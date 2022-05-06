@@ -14,8 +14,14 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult SeekerSignUp(Seeker seeker)
         {
-            SeekerRepositry.AddSeeker(seeker);
-            return RedirectToAction("SeekerLogin", "Login");
+            if (SeekerRepositry.AddSeeker(seeker) > 0)
+            {
+                return RedirectToAction("SeekerLogin", "Login");
+            }
+            else
+            {
+                return View("Error","A person with same email already exists");
+            }
         }
 
         [HttpGet]
@@ -27,8 +33,14 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult HelperSignUp(Helper helper)
         {
-            HelperRepositry.AddHelper(helper);
-            return RedirectToAction("HelperLogin", "Login");
+            if (HelperRepositry.AddHelper(helper) > 0)
+            {
+                return RedirectToAction("HelperLogin", "Login");
+            }
+            else
+            {
+                return View("Error", "A person with same email already exists");
+            }
         }
     }
 }

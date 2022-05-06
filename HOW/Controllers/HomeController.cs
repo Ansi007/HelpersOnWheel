@@ -8,7 +8,10 @@ namespace HOW.Controllers
     {
         public ViewResult Index()
         {
-            return View();
+            DataLists lists = new DataLists();
+            lists.helpers = HelperRepositry.GetHelpers();
+            lists.seekers = SeekerRepositry.GetSeekers();
+            return View(lists);
         }
     }
 }

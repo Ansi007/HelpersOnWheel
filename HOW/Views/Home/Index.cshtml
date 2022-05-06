@@ -1,13 +1,86 @@
-﻿@{
+﻿@using HOW
+@using HOW.Models
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div>
-    LOOP AND GET ALL TABLE ENTITY AND DISPLAY HERE. SEEKERS AND HELPERS BOTH TABLES. FROM DATABASE.
+    <h1>Helpers Table</h1>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+             <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Profession</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+            @{
+                int counter = 1;
+                foreach(Helper h in Model.helpers)
+                {
+                    <tr>
+                    <th scope = "row">@counter</th>
+                    <td>@h.FirstName</td>
+                    <td>@h.LastName</td>
+                    <td>@h.Age</td>
+                    <td>@h.Gender</td>
+                    <td>@h.Profession</td>
+                    <td>@h.Email</td>
+                    <td>@h.Password</td>
+                    <td>@h.PhoneNumber</td>
+                    <td>@h.Address</td>
+                    <td>@h.City</td>
+                    <td>@h.Zip</td>
+                    </tr>
+                    counter = counter + 1;
+                }
+            }
+  </tbody>
+</table>
+    <h1>Seekers Table</h1>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+             <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+            @{
+                counter = 1;
+                foreach(Seeker s in Model.seekers)
+                {
+                    <tr>
+                    <th scope = "row">@counter</th>
+                    <td>@s.FirstName</td>
+                    <td>@s.LastName</td>
+                    <td>@s.Age</td>
+                    <td>@s.Gender</td>
+                    <td>@s.Email</td>
+                    <td>@s.Password</td>
+                    <td>@s.PhoneNumber</td>
+                    </tr>
+                    counter = counter + 1;
+                }
+            }
+  </tbody>
+</table>
 
-    <table>
-        <tr>
-            <th></th>
-        </tr>
-    </table>
 </div>

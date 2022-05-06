@@ -25,7 +25,12 @@ namespace HOW.Models
             cmd.Parameters.Add(p5);
             cmd.Parameters.Add(p6);
             cmd.Parameters.Add(p7);
-            int r = cmd.ExecuteNonQuery();
+            int r = 0;
+            try { r = cmd.ExecuteNonQuery(); }
+            catch (SqlException ex)
+            {
+                r = -1;
+            }
             con.Close();
             return r;
         }
@@ -51,6 +56,22 @@ namespace HOW.Models
             }
             con.Close();
             return seekers;
+        }
+
+        static public bool ValidateSeeker(Login l)
+        {
+            SqlConnection con = new SqlConnection(connString);
+            con.Open();
+            string query = "SELECT * FROM SEEKER WHERE EMAIL = @E AND PASSWORD = @P";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlParameter p1 = new SqlParameter("E", l.Email);
+            SqlParameter p2 = new SqlParameter("P", l.Password);
+            cmd.Parameters.Add(p1);
+            cmd.Parameters.Add(p2);
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+            bool rows = sqlDataReader.HasRows;
+            con.Close();
+            return rows;
         }
     }
 }

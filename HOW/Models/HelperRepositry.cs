@@ -32,7 +32,11 @@ namespace HOW.Models
             cmd.Parameters.Add(p9);
             cmd.Parameters.Add(p10);
             cmd.Parameters.Add(p11);
-            int r = cmd.ExecuteNonQuery();
+            int r = 0;
+            try { r = cmd.ExecuteNonQuery(); }
+            catch (SqlException ex) {
+                r = -1;
+            }
             con.Close();
             return r;
         }
@@ -62,6 +66,21 @@ namespace HOW.Models
             }
             con.Close();
             return helpers;
+        }
+        static public bool ValidateHelper(Login l)
+        {
+            SqlConnection con = new SqlConnection(connString);
+            con.Open();
+            string query = "SELECT * FROM HELPER WHERE EMAIL = @E AND PASSWORD = @P";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlParameter p1 = new SqlParameter("E", l.Email);
+            SqlParameter p2 = new SqlParameter("P", l.Password);
+            cmd.Parameters.Add(p1);
+            cmd.Parameters.Add(p2);
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+            bool rows = sqlDataReader.HasRows;
+            con.Close();
+            return rows;
         }
     }
 }
