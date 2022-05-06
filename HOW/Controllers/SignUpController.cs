@@ -12,9 +12,10 @@ namespace HOW.Controllers
         }
 
         [HttpPost]
-        public ViewResult SeekerSignUp(Seeker seeker)
+        public IActionResult SeekerSignUp(Seeker seeker)
         {
-            return View();
+            SeekerRepositry.AddSeeker(seeker);
+            return RedirectToAction("SeekerLogin", "Login");
         }
 
         [HttpGet]
@@ -24,9 +25,10 @@ namespace HOW.Controllers
         }
 
         [HttpPost]
-        public ViewResult HelperSignUp(Helper helper)
+        public IActionResult HelperSignUp(Helper helper)
         {
-            return View();
+            HelperRepositry.AddHelper(helper);
+            return RedirectToAction("HelperLogin", "Login");
         }
     }
 }
