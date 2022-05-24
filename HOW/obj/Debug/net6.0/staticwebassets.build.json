@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8wLv8wlODz54DFHzHwy9DQOYVdDC53cCWJGC43+pVw8=",
+  "Hash": "drp0YEr59A3bM29qDyj5dfcMAyV1nTl2N7hdcxmtsuQ=",
   "Source": "HOW",
   "BasePath": "_content/HOW",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\favicon.ico",
