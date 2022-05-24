@@ -6,6 +6,12 @@
     ViewData["Title"] = "Helper Login";
 }
 
+@section Home {
+    <li class="nav-item active">
+        <a class="nav-link" asp-controller = "Home" asp-action = "Index">Home</a>
+    </li>
+}
+
 <div style = "margin: 30px 30px">
     <h1>Helper Login</h1>
     <form method = "post" action = "/Login/HelperLogin">
