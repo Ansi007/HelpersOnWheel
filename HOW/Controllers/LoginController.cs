@@ -36,5 +36,10 @@ namespace HOW.Controllers
             }
             return View("Error", "Please Enter Valid Credentials");
         }
+
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
     }
 }
