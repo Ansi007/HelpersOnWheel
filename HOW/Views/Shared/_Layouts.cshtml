@@ -11,7 +11,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" asp-controller = "Home" asp-action = "Index">Helpers On Wheel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -53,7 +53,16 @@
         </div>
     </nav>
     @RenderBody()
-    <footer></footer>
+    <footer>
+            <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      <!-- Copyright -->
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div>
+      <!-- Copyright -->
+    </div>
+    </footer>
 </body>
 
 </html>
