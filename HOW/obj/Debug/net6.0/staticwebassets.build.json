@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EY5vPYt5DmuToBPqDBkdtPzXNRUUunBT91jzmYbm17I=",
+  "Hash": "A82vZ1zQPcVbWr7ucRiio+U39llg6J1wsGHd5fKnI0o=",
   "Source": "HOW",
   "BasePath": "_content/HOW",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\post.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/post.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\post.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\regular.css",
