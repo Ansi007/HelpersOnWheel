@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A82vZ1zQPcVbWr7ucRiio+U39llg6J1wsGHd5fKnI0o=",
+  "Hash": "S1gk9LBlf6R8Sh2e32RJF+lwjO/F0+2e/NiMV0iU1+0=",
   "Source": "HOW",
   "BasePath": "_content/HOW",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\brands.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\edit.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/edit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\edit.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\fontawesome.css",
@@ -253,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\solid.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\svg-with-js.css",
