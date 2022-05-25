@@ -4,25 +4,27 @@ namespace HOW.Models
 {
     public class Seeker
     {
-        [Required]
+        [Required(ErrorMessage = "FirstName is Required")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "LastName is Required")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Age is Required")]
+        [Range(16,200,ErrorMessage = "Age cannot be less than 16")]
         public int Age { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Gender is Required")]
         public string Gender { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Email is Required")]
+        [EmailAddress(ErrorMessage = "Input should be a valid Email Address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Password is Required")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "PhoneNumber is Required")]
         public string PhoneNumber { get; set; }
     }
 }

@@ -14,14 +14,18 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult SeekerSignUp(Seeker seeker)
         {
-            if (SeekerRepositry.AddSeeker(seeker) > 0)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("SeekerLogin", "Login");
+                if (SeekerRepositry.AddSeeker(seeker) > 0)
+                {
+                    return RedirectToAction("SeekerLogin", "Login");
+                }
+                else
+                {
+                    return View("Error", "A person with same email already exists");
+                }
             }
-            else
-            {
-                return View("Error","A person with same email already exists");
-            }
+            else return View();
         }
         [Route("/SignUp/HelperSignUp", Name = "signuphelper")]
         [HttpGet]
@@ -33,14 +37,18 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult HelperSignUp(Helper helper)
         {
-            if (HelperRepositry.AddHelper(helper) > 0)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("HelperLogin", "Login");
+                if (HelperRepositry.AddHelper(helper) > 0)
+                {
+                    return RedirectToAction("HelperLogin", "Login");
+                }
+                else
+                {
+                    return View("Error", "A person with same email already exists");
+                }
             }
-            else
-            {
-                return View("Error", "A person with same email already exists");
-            }
+            else return View();
         }
     }
 }

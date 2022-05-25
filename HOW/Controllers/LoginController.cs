@@ -20,21 +20,29 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult HelperLogin(Login l)
         {
-            if (HelperRepositry.ValidateHelper(l))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
+                if (HelperRepositry.ValidateHelper(l))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else return View("Error", "Please Enter Valid Credentials");
             }
-            return View("Error","Please Enter Valid Credentials");
+            else return View();
         }
 
         [HttpPost]
         public IActionResult SeekerLogin(Login l)
         {
-            if (SeekerRepositry.ValidateSeeker(l))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index","Home");
+                if (SeekerRepositry.ValidateSeeker(l))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                return View("Error", "Please Enter Valid Credentials");
             }
-            return View("Error", "Please Enter Valid Credentials");
+            else return View();
         }
 
         public IActionResult ForgotPassword()

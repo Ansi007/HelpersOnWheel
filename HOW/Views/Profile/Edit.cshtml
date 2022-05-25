@@ -1,4 +1,9 @@
-﻿@{
+﻿@using HOW
+@using HOW.Models
+@model Helper
+
+
+@{
     ViewData["Title"] = "Edit Profile";
 }
 
@@ -55,32 +60,44 @@
                                                             <td class="field">First Name</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "FirstName">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "FirstName" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Last Name</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "LastName">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "LastName" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Gender</td>
                                                             <td>
                                                                 <select class="form-control input-inline input-xs"
-                                                                    name="gender">
+                                                                    asp-for = "Gender">
                                                                     <option value="male">Male</option>
                                                                     <option value="female">Female</option>
                                                                     <option value="female">Others</option>
                                                                 </select>
+                                                                                                                                    <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "Gender" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Age</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language" type="number">
+                                                                    asp-for = "Age">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "Age" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -90,21 +107,30 @@
                                                             <td class="field">Profession</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "Profession">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "Profession" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Email</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "Email">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "Email" class = "text-danger"></span>
+s
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Password</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "Password">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "Password" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr class="divider">
@@ -114,7 +140,10 @@
                                                             <td class="field">Phone Number </td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "PhoneNumber">
+                                                                                                                                        <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "PhoneNumber" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr class="divider">
@@ -124,32 +153,28 @@
                                                             <td class="field">City</td>
                                                             <td>
                                                                 <select class="form-control input-inline input-xs"
-                                                                    name="region">
+                                                                     asp-for = "City">
                                                                     <option value="US" selected="">Los Angeles</option>
-                                                                    <option value="AF">Afghanistan</option>
-                                                                    <option value="AL">Albania</option>
-                                                                    <option value="DZ">Algeria</option>
-                                                                    <option value="AS">American Samoa</option>
-                                                                    <option value="AD">Andorra</option>
-                                                                    <option value="AO">Angola</option>
-                                                                    <option value="AI">Anguilla</option>
-                                                                    <option value="AQ">Antarctica</option>
-                                                                    <option value="AG">Antigua and Barbuda</option>
+                                                                    <option value="AF">Lahore</option>
                                                                 </select>
+                                                                                                                                    <span asp-validation-for = "Zip" class = "text-danger"></span>
+                                                                    <span asp-validation-for = "City" class = "text-danger"></span>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Zip</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                     asp-for = "Zip">
+                                                                    <span asp-validation-for = "Zip" class = "text-danger"></span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="field">Address</td>
                                                             <td>
                                                                 <input class="form-control input-inline input-xs"
-                                                                    name="language">
+                                                                    >
                                                             </td>
                                                         </tr>
 

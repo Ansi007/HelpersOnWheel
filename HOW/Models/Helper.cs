@@ -4,37 +4,40 @@ namespace HOW.Models
 {
     public class Helper
     {
-        [Required]
+        [Required(ErrorMessage = "FirstName is required")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "LastName is required")]
         public string LastName { get; set; }
-        
-        [Required]
+
+        [Required(ErrorMessage = "Age is required")]
+        [Range(16,200,ErrorMessage = "Age cannot be less than 16 or greater than 200")]
         public int Age { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Gender is required")]
         public string Gender { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Profession is required")]
         public string Profession { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Input should be a valid Email Address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "PhoneNumber is required")]
+        [Phone(ErrorMessage ="Please Enter a Valid Phone Number")]
         public string PhoneNumber { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Address is required")]
         public string Address { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "City is required")]
         public string City { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Zip is required")]
         public int Zip { get; set; }
 
     }

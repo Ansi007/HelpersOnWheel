@@ -6,38 +6,39 @@
 <link href="~/CSS/home.css" rel="Stylesheet" type="text/css" />
 }
 
-    <br />
-    <div class="container m-auto col-xl-8 col-lg-8 col-md-6">
-        <div class="col-lg-18">
-            <div class="panel profile-cover">
-                <div class="profile-cover__img">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                    <h3 class="h3">John Doe</h3>
-                </div>
-                <div class="profile-cover__action bg--img" data-overlay="0.3">
-                    <a class="btn btn-rounded btn-info" asp-action = "Edit">
-                        <i class="fa fa-comment"></i>
-                        <span>Edit Profile</span>
-                    </a>
-                    <button class="btn btn-rounded btn-info">
-                        <i class="fa fa-comment"></i>
-                        <span>Message</span>
-                    </button>
-                </div>
-                <div class="profile-cover__info">
-                    <ul class="nav">
-                        <li><strong>26</strong>Seeks</li>
-                    </ul>
-                </div>
+<br />
+<div class="container m-auto col-xl-8 col-lg-8 col-md-6">
+    <div class="col-lg-18">
+        <div class="panel profile-cover">
+            <div class="profile-cover__img">
+                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
+                <h3 class="h3">John Doe</h3>
             </div>
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">SEEK ACTIVITY</h3>
-                </div>
-                <div class="panel-content panel-activity">
-                                    <form action="#" class="panel-activity__status">
+            <div class="profile-cover__action bg--img" data-overlay="0.3">
+                <a class="btn btn-rounded btn-info" asp-action="Edit">
+                    <i class="fa fa-comment"></i>
+                    <span>Edit Profile</span>
+                </a>
+                <button class="btn btn-rounded btn-info">
+                    <i class="fa fa-comment"></i>
+                    <span>Message</span>
+                </button>
+            </div>
+            <div class="profile-cover__info">
+                <ul class="nav">
+                    <li><strong>26</strong>Seeks</li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">SEEK ACTIVITY</h3>
+            </div>
+            <div class="panel-content panel-activity">
+                <form action="#" class="panel-activity__status">
                     <input type="text" placeholder="Title of your Request" class="form-control">
-                    <textarea name="user_activity" placeholder="Description of your Request" class="form-control"></textarea>
+                    <textarea name="user_activity" placeholder="Description of your Request"
+                        class="form-control"></textarea>
                     <div class="actions">
                         <div class="btn-group">
                             <button type="button" class="btn-link" title="" data-toggle="tooltip"
@@ -62,12 +63,13 @@
                         </button>
                     </div>
                 </form>
-                    <ul class="panel-activity__list">
-                    @for(int i = 0; i < 10; i++){
-                        <partial name = "ActivityItemPartialView"/>
+                <ul class="panel-activity__list">
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        <partial name="ActivityItemPartialView" />
                     }
-                    </ul>
-                </div>
+                </ul>
             </div>
         </div>
     </div>
+</div>
