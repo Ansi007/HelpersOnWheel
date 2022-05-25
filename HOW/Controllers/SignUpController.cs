@@ -6,6 +6,7 @@ namespace HOW.Controllers
     public class SignUpController : Controller
     {
         [HttpGet]
+        [Route("/SignUp/SeekerSignUp", Name = "signupseeker")]
         public ViewResult SeekerSignUp()
         {
             return View();

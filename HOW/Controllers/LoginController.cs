@@ -8,13 +8,19 @@ namespace HOW.Controllers
         [HttpGet]
         public ViewResult HelperLogin()
         {
-            return View();
+            ViewData["title"] = "Helper Login";
+            ViewBag.Method = "/Login/HelperLogin";
+            ViewBag.SignUpMethod = "signuphelper";
+            return View("Index");
         }
 
         [HttpGet]
         public ViewResult SeekerLogin()
         {
-            return View();
+            ViewData["title"] = "Seeker Login";
+            ViewBag.Method = "/Login/SeekerLogin";
+            ViewBag.SignUpMethod = "signupseeker";
+            return View("Index");
         }
 
         [HttpPost]
@@ -28,7 +34,10 @@ namespace HOW.Controllers
                 }
                 else return View("Error", "Please Enter Valid Credentials");
             }
-            else return View();
+            ViewData["title"] = "Helper Login";
+            ViewBag.Method = "/Login/HelperLogin";
+            ViewBag.SignUpMethod = "signuphelper";
+            return View("Index");
         }
 
         [HttpPost]
@@ -42,7 +51,10 @@ namespace HOW.Controllers
                 }
                 return View("Error", "Please Enter Valid Credentials");
             }
-            else return View();
+            ViewData["title"] = "Seeker Login";
+            ViewBag.Method = "/Login/SeekerLogin";
+            ViewBag.SignUpMethod = "signupseeker";
+            return View("Index");
         }
 
         public IActionResult ForgotPassword()
