@@ -35,12 +35,39 @@
                     <h3 class="panel-title">SEEK ACTIVITY</h3>
                 </div>
                 <div class="panel-content panel-activity">
+                                    <form action="#" class="panel-activity__status">
+                    <input type="text" placeholder="Title of your Request" class="form-control">
+                    <textarea name="user_activity" placeholder="Description of your Request" class="form-control"></textarea>
+                    <div class="actions">
+                        <div class="btn-group">
+                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                                data-original-title="Post an Image">
+                                <i class="fa fa-image"></i>
+                            </button>
+                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                                data-original-title="Post an Video">
+                                <i class="fa fa-video-camera"></i>
+                            </button>
+                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                                data-original-title="Post an Idea">
+                                <i class="fa fa-lightbulb-o"></i>
+                            </button>
+                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                                data-original-title="Post an Question">
+                                <i class="fa fa-question-circle-o"></i>
+                            </button>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-rounded btn-info">
+                            Seek Help
+                        </button>
+                    </div>
+                </form>
                     <ul class="panel-activity__list">
                         <li>
                             <i class="activity__list__icon fa fa-question-circle-o"></i>
                             <div class="activity__list__header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                                <a href="#">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
+                                <a asp-controller = "Profile" asp-action = "Timeline">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
                                     can
                                     I change my annual reports
                                     for the better effect?</a>
@@ -56,8 +83,7 @@
                                 </p>
                             </div>
                             <div class="activity__list__footer">
-                                <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
-                                <a href="#"> <i class="fa fa-comments"></i>23</a>
+                            <a asp-controller = "Post"  asp-action = "Index"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
@@ -65,7 +91,7 @@
                             <i class="activity__list__icon fa fa-question-circle-o"></i>
                             <div class="activity__list__header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                                <a href="#">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
+                                <a asp-controller = "Profile" asp-action = "Timeline">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
                                     can
                                     I change my annual reports
                                     for the better effect?</a>
@@ -81,8 +107,7 @@
                                 </p>
                             </div>
                             <div class="activity__list__footer">
-                                <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
-                                <a href="#"> <i class="fa fa-comments"></i>23</a>
+                            <a asp-controller = "Post"  asp-action = "Index"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
@@ -90,7 +115,7 @@
                             <i class="activity__list__icon fa fa-question-circle-o"></i>
                             <div class="activity__list__header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                                <a href="#">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
+                                <a asp-controller = "Profile" asp-action = "Timeline">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
                                     can
                                     I change my annual reports
                                     for the better effect?</a>
@@ -106,8 +131,7 @@
                                 </p>
                             </div>
                             <div class="activity__list__footer">
-                                <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
-                                <a href="#"> <i class="fa fa-comments"></i>23</a>
+                            <a asp-controller = "Post"  asp-action = "Index"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
@@ -115,7 +139,7 @@
                             <i class="activity__list__icon fa fa-question-circle-o"></i>
                             <div class="activity__list__header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                                <a href="#">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
+                                <a asp-controller = "Profile" asp-action = "Timeline">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
                                     can
                                     I change my annual reports
                                     for the better effect?</a>
@@ -131,8 +155,7 @@
                                 </p>
                             </div>
                             <div class="activity__list__footer">
-                                <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
-                                <a href="#"> <i class="fa fa-comments"></i>23</a>
+                            <a asp-controller = "Post"  asp-action = "Index"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
@@ -140,7 +163,7 @@
                             <i class="activity__list__icon fa fa-question-circle-o"></i>
                             <div class="activity__list__header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                                <a href="#">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
+                                <a asp-controller = "Profile" asp-action = "Timeline">John Doe</a> Asked for help: <a asp-controller="Post" asp-action="Index">How
                                     can
                                     I change my annual reports
                                     for the better effect?</a>
@@ -156,8 +179,7 @@
                                 </p>
                             </div>
                             <div class="activity__list__footer">
-                                <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
-                                <a href="#"> <i class="fa fa-comments"></i>23</a>
+                            <a asp-controller = "Post"  asp-action = "Index"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>

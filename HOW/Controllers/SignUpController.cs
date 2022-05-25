@@ -23,7 +23,7 @@ namespace HOW.Controllers
                 return View("Error","A person with same email already exists");
             }
         }
-
+        [Route("/SignUp/HelperSignUp", Name = "signuphelper")]
         [HttpGet]
         public ViewResult HelperSignUp()
         {
