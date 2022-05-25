@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "drp0YEr59A3bM29qDyj5dfcMAyV1nTl2N7hdcxmtsuQ=",
+  "Hash": "qoJqNS2z83/nxg0i0CG6qFJQmzpikWzLQYcdxEOfSIE=",
   "Source": "HOW",
   "BasePath": "_content/HOW",
   "Mode": "Default",
@@ -17,6 +17,40 @@
   ],
   "Assets": [
     {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\home.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\signup.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/signup.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\signup.css"
+    },
+    {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\site.css",
       "SourceId": "HOW",
       "SourceType": "Discovered",
@@ -32,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\StyleSheet.css",
-      "SourceId": "HOW",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
-      "BasePath": "_content/HOW",
-      "RelativePath": "css/StyleSheet.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\favicon.ico",

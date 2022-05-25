@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VTyRabmsGtlgL+d7bRvo1NqZURLaQC6nZk1FFpv14CQJnz4eFdkUUmLRO2hLj2guLIeX+14bpKNFMzt6eRhUMA==",
+  "dgSpecHash": "pdAWRNo9VS3FHrJEw9FscTyKM8DPLFL/O+9Pf9bmWDUb7kEsvYdUxhh6ly5laM+iBKihLfuTeJDeUTx8d5IYlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\HOW.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anns\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\Anns\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Anns\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Anns\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
