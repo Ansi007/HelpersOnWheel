@@ -22,6 +22,7 @@ namespace HOW.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is Required")]
+        [StringLength(30,ErrorMessage = "Password cannot be greater than 30")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "PhoneNumber is Required")]
