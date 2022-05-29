@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S1gk9LBlf6R8Sh2e32RJF+lwjO/F0+2e/NiMV0iU1+0=",
+  "Hash": "upMwABE14sPavYz7cQ1Ra4C9RMgHslNtTaDiTSAwRiI=",
   "Source": "HOW",
   "BasePath": "_content/HOW",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\css\\fontawesome.min.css"
     },
     {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\footer.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/footer.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\footer.css"
+    },
+    {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\home.css",
       "SourceId": "HOW",
       "SourceType": "Discovered",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\NavBar.css",
+      "SourceId": "HOW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\",
+      "BasePath": "_content/HOW",
+      "RelativePath": "css/NavBar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\NavBar.css"
     },
     {
       "Identity": "C:\\Users\\Anns\\Desktop\\6th Semester Material\\EAD\\Project\\HOW\\HOW\\wwwroot\\css\\post.css",
