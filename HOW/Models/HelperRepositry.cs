@@ -6,7 +6,11 @@ namespace HOW.Models
         static string connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HelpersOnWheel;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         static public int AddHelper(Helper h)
         {
-            SqlConnection con = new SqlConnection(connString);
+            var context = new HelpersOnWheelContext();
+            context.Helpers.Add(h);
+            return context.SaveChanges();
+
+/*            SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "INSERT INTO HELPER(FIRSTNAME,LASTNAME,AGE,GENDER,PROFESSION,EMAIL,PASSWORD,PHONENUMBER,ADDRESS,CITY,ZIP) VALUES(@F,@L,@A,@G,@PR,@E,@P,@PH,@AD,@C,@Z)";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -38,11 +42,19 @@ namespace HOW.Models
                 r = -1;
             }
             con.Close();
-            return r;
+            return r;*/
         }
         static public List<Helper> GetHelpers()
         {
-            SqlConnection con = new SqlConnection(connString);
+            List<Helper> helpers = new List<Helper>();
+            var context = new HelpersOnWheelContext();
+            foreach(Helper h in context.Helpers)
+            {
+                helpers.Add(h);
+            }
+            return helpers;
+
+            /*SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "SELECT * FROM HELPER";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -65,11 +77,20 @@ namespace HOW.Models
                 helpers.Add(helper);
             }
             con.Close();
-            return helpers;
+            return helpers;*/
         }
         static public bool ValidateHelper(Login l)
         {
-            SqlConnection con = new SqlConnection(connString);
+            var context = new HelpersOnWheelContext();
+            foreach(Helper h in context.Helpers)
+            {
+                if(h.Email == l.Email && h.Password == l.Password)
+                {
+                    return true;
+                }
+            }
+            return false;
+/*            SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "SELECT * FROM HELPER WHERE EMAIL = @E AND PASSWORD = @P";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -80,7 +101,7 @@ namespace HOW.Models
             SqlDataReader sqlDataReader = cmd.ExecuteReader();
             bool rows = sqlDataReader.HasRows;
             con.Close();
-            return rows;
+            return rows;*/
         }
     }
 }

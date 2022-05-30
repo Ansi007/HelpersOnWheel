@@ -7,6 +7,7 @@ namespace HOW
 {
     public partial class Seeker
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "LastName is required")]
         public string FirstName { get; set; } = null!;
         [Required(ErrorMessage = "LastName is required")]

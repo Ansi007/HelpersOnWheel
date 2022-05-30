@@ -4,10 +4,14 @@ namespace HOW.Models
 {
     public class SeekerRepositry
     {
-        static string connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HelpersOnWheel;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //static string connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HelpersOnWheel;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         static public int AddSeeker(Seeker s)
         {
-            SqlConnection con = new SqlConnection(connString);
+            var context = new HelpersOnWheelContext();
+            context.Seekers.Add(s);
+            return context.SaveChanges();
+
+            /*SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "INSERT INTO SEEKER(FIRSTNAME,LASTNAME,AGE,GENDER,EMAIL,PASSWORD,PHONENUMBER) VALUES(@F,@L,@A,@G,@E,@P,@PH)";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -33,10 +37,11 @@ namespace HOW.Models
             }
             con.Close();
             return r;
-        }
+        */}
         static public List<Seeker> GetSeekers()
         {
-            SqlConnection con = new SqlConnection(connString);
+            return null;
+            /*SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "SELECT * FROM SEEKER";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -56,11 +61,20 @@ namespace HOW.Models
             }
             con.Close();
             return seekers;
-        }
+*/        }
 
         static public bool ValidateSeeker(Login l)
         {
-            SqlConnection con = new SqlConnection(connString);
+            var context = new HelpersOnWheelContext();
+            foreach(Seeker seeker in context.Seekers)
+            {
+                if(seeker.Email == l.Email && seeker.Password == l.Password)
+                {
+                    return true;
+                }
+            }
+            return false;
+            /*SqlConnection con = new SqlConnection(connString);
             con.Open();
             string query = "SELECT * FROM SEEKER WHERE EMAIL = @E AND PASSWORD = @P";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -71,7 +85,7 @@ namespace HOW.Models
             SqlDataReader sqlDataReader = cmd.ExecuteReader();
             bool rows = sqlDataReader.HasRows;
             con.Close();
-            return rows;
+            return rows;*/
         }
     }
 }
