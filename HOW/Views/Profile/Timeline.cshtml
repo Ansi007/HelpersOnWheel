@@ -4,6 +4,7 @@
 
 @{
     ViewData["Title"] = "Profile Timeline";
+    List<Question> questions = new QuestionRepository().GetQuestions("annsshahbaz@gmail.com");
 }
 
 @section HomeCss {
@@ -70,9 +71,9 @@
                     </div>
                 </form>
                 <ul class="panel-activity__list">
-                    @for (int i = 0; i < 10; i++)
+                    @foreach(Question q in questions)
                     {
-                        <partial name="ActivityItemPartialView" />
+                        <partial name="ActivityItemPartialView" model="@q"/>
                     }
                 </ul>
             </div>

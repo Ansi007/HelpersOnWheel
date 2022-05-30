@@ -6,6 +6,8 @@ namespace HOW.Controllers
     {
         public IActionResult Index()
         {
+            var x = ViewBag;
+            var y = ViewData;
             return View();
         }
         public IActionResult Edit()

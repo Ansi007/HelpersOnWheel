@@ -1,17 +1,19 @@
-﻿<li>
+﻿@{
+    ViewBag.Model = @Model;
+    ViewData["Model"] = "MYMODEL";
+}
+
+<li>
     <i class="activity__list__icon fa fa-question-circle-o"></i>
     <div class="activity__list__header">
         <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-        <a asp-controller="Profile" asp-action="Timeline">John Doe</a> Asked for help: <a asp-controller="Post"
-            asp-action="Index">How can I change my annual reports
+        <a asp-controller="Profile" asp-action="Timeline" >@Model.AuthorEmail</a> Asked for help: <a asp-controller="Post"
+            asp-action="Index">@Model.Title
             for the better effect?</a>
     </div>
     <div class="activity__list__body entry-content">
         <p>
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Voluptatibus
-            ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni
-            dolores corporis!
-            <em>Molestiae commodi nesciunt a, repudiandae repellendus ea.</em>
+            @Model.Description
         </p>
     </div>
     <div class="activity__list__footer">

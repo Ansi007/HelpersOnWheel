@@ -17,10 +17,9 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult Question(Question question)
         {
+            QuestionRepository questionRepository = new QuestionRepository();
             question.AuthorEmail = "annsshahbaz@gmail.com";
-            var context = new HelpersOnWheelContext();
-            context.Questions.Add(question);
-            context.SaveChanges();
+            questionRepository.AddQuestion(question);
             return View("Timeline");
         }
     }

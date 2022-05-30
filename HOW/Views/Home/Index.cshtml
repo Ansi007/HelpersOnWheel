@@ -1,5 +1,9 @@
-﻿@{
+﻿@using HOW
+@using HOW.Models
+
+@{
     ViewData["Title"] = "Home Page";
+    List <Question> questions = new QuestionRepository().GetQuestions();
 }
 
 @section HomeCss {
@@ -15,8 +19,8 @@
             </div>
             <div class="panel-content panel-activity">
                 <ul class="panel-activity__list">
-                    @for(int i = 0; i < 10; i++){
-                        <partial name = "ActivityItemPartialView"/>
+                    @foreach(Question q in questions){
+                        <partial name = "ActivityItemPartialView" model="@q"/>
                     }
                </ul>
             </div>
