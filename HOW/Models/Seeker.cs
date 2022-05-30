@@ -1,10 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
-namespace HOW.Models
+namespace HOW
 {
-    public class Seeker
+    public partial class Seeker
     {
-        [Required(ErrorMessage = "FirstName is Required")]
+        public int Id { get; set; }
+        public string FirstName { get; set; } = null!;
+        public string LastName { get; set; } = null!;
+        public int Age { get; set; }
+        public string Gender { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Password { get; set; } = null!;
+        public string PhoneNumber { get; set; } = null!;
+
+        /*[Required(ErrorMessage = "FirstName is Required")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "LastName is Required")]
@@ -26,6 +36,6 @@ namespace HOW.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "PhoneNumber is Required")]
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }*/
     }
 }
