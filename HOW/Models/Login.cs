@@ -4,11 +4,10 @@ namespace HOW.Models
 {
     public class Login
     {
-        [Required(ErrorMessage = "Email Address is Required")]
-        [EmailAddress(ErrorMessage = "Input should be a valid Email Address")]
-        public string Email { get; set; }
-
-        [Required(ErrorMessage = "Password is Required")]
-        public string Password { get; set; }
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Input shoulde be of Email type")]
+        public string Email { get; set; } = null!;
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; } = null!;
     }
 }
