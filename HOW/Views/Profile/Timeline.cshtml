@@ -1,4 +1,8 @@
-﻿@{
+﻿@using HOW
+@using HOW.Models
+@model Question
+
+@{
     ViewData["Title"] = "Profile Timeline";
 }
 
@@ -35,9 +39,11 @@
                 <h3 class="panel-title">SEEK ACTIVITY</h3>
             </div>
             <div class="panel-content panel-activity">
-                <form action="#" class="panel-activity__status">
-                    <input type="text" placeholder="Title of your Request" class="form-control">
-                    <textarea name="user_activity" placeholder="Description of your Request"
+                <form method="post" asp-controller="Profile" asp-action="Question" class="panel-activity__status">
+                    <span asp-validation-for="Title"></span>
+                    <input asp-for="Title" placeholder="Title of your Request" class="form-control">
+                    <span asp-validation-for="Description"></span>
+                    <textarea asp-for = "Description" placeholder="Description of your Request"
                         class="form-control"></textarea>
                     <div class="actions">
                         <div class="btn-group">
