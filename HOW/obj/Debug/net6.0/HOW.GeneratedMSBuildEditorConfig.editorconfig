@@ -8,61 +8,65 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HOW
 build_property.RootNamespace = HOW
-build_property.ProjectDir = C:\Users\Anns\Desktop\6th Semester Material\EAD\Project\HOW\HOW\
+build_property.ProjectDir = c:\Users\Anns\Desktop\6th Semester Material\EAD\Project\HOW\HOW\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Anns\Desktop\6th Semester Material\EAD\Project\HOW\HOW
+build_property.MSBuildProjectDirectory = c:\Users\Anns\Desktop\6th Semester Material\EAD\Project\HOW\HOW
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Home/Index.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Login/ForgotPassword.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Login/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Login/Index.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Post/Index.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Post/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Post/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Profile/Edit.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Profile/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Profile/Timeline.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Profile/Timeline.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxUaW1lbGluZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/ActivityItemPartialView.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/ActivityItemPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjdGl2aXR5SXRlbVBhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/Error.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/_Layouts.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/Shared/_Layouts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/SignUp/HelperSignUp.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/SignUp/HelperSignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXEhlbHBlclNpZ25VcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/SignUp/SeekerSignUp.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/SignUp/SeekerSignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXFNlZWtlclNpZ25VcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/_ViewImports.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/_ViewStart.cshtml]
+[c:/Users/Anns/Desktop/6th Semester Material/EAD/Project/HOW/HOW/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
