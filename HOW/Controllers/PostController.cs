@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using HOW.Models;
 
 namespace HOW.Controllers
 {
     public class PostController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(Question q)
         {
-            var x = ViewBag;
-            var y = ViewData;
-            return View();
+            return View(q);
         }
         public IActionResult Edit()
         {

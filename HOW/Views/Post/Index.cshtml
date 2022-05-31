@@ -23,15 +23,15 @@
                     <div class="timeline-header">
                         <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
                                 alt=""></span>
-                        <span class="username"><a asp-controller="Profile" asp-action="Timeline">ViewBag.Model.AuthorName</a>
+                        <span class="username"><a asp-controller="Profile" asp-action="Timeline">@Model.AuthorEmail</a>
                             <small></small></span>
                          <span class="pull-right ml-3"><a asp-controller="Post" asp-action="Edit"><i class="fa-solid fa-pen-to-square"></i></a></span>
                         <span class="pull-right text-muted">18 Views</span>
                     </div>
                     <div class="timeline-content">
-                        <h4>ViewBag.Model.Title</h4>
+                        <h4>@Model.Title</h4>
                         <p>
-                           ViewBag.Model.Description
+                           @Model.Description
                         </p>
                     </div>
                     <div class="timeline-likes">

@@ -27,10 +27,10 @@
 
           <!-- Password input -->
           <div class="form-outline mb-3">
-            <input asp-for="Password" class="form-control form-control-lg"
+            <input type = "password" asp-for="Password" class="form-control form-control-lg"
               placeholder="Enter password" />
             <label class="form-label" for="Password">Password</label>
-            <span type = "Password" asp-validation-for="Password" class="text-danger" type = "password"></span>
+            <span asp-validation-for="Password" class="text-danger" type = "password"></span>
 
           </div>
 
