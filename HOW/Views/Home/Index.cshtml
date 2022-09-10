@@ -19,7 +19,7 @@
             </div>
             <div class="panel-content panel-activity">
                 <ul class="panel-activity__list">
-                    @foreach(Question q in questions){
+                    @foreach(Question q in questions) {
                         //<partial name = "ActivityItemPartialView" model="@q"/>
                         //@Component.InvokeAsync("Activity");
                         <vc:activity question = "@q"></vc:activity>

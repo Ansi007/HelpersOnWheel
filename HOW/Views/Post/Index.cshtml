@@ -1,6 +1,19 @@
-﻿@section PostCss {
+﻿@using HOW.Models
+@section PostCss {
 <link href="~/CSS/post.css" rel="Stylesheet" type="text/css" />
 }
+@{
+    List <Answer> answers = new AnswerRepository().GetAnswers(@Model.AuthorEmail, @Model.Title);
+}
+<script>
+    $(document).ready(function () {
+    $("#postbtn").click(function () {
+        const answer1 = $("#answertxt").val();
+        $.post("/Post/Answer", {answer: answer1}, function() {
+        });
+    });
+});
+</script>
 <div>
     <div class="tab-pane fade active show" id="profile-post">
         <!-- begin timeline -->
@@ -37,56 +50,21 @@
                     <div class="timeline-likes">
                         <span class="stats-text">2 Answers</span>
                     </div>
-                    <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                                alt=""></span>
-                        <span class="username"><a asp-controller="Profile" asp-action="Timeline">John Cena</a>
-                            <small></small></span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Use Justify Content</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis
-                            tincidunt
-                            luctus.
-                            Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, beatae et ad odio odit
-                            recusandae dolor rem eaque, veniam maxime eligendi eum vero animi voluptates non harum,
-                            placeat repellendus iure doloribus tempora vel facilis ullam totam natus? Modi a
-                            perferendis
-                            omnis mollitia incidunt atque dicta, consequuntur sunt, accusantium.
-                        </p>
-                    </div>
-
-                    <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                                alt=""></span>
-                        <span class="username"><a asp-controller="Profile" asp-action="Timeline">Ray Mysterio</a>
-                            <small></small></span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Use Margin Auto</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis
-                            tincidunt
-                            luctus.
-                            Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, beatae et ad odio odit
-                            recusandae dolor rem eaque, veniam maxime eligendi eum vero animi voluptates non harum,
-                            placeat repellendus iure doloribus tempora vel facilis ullam totam natus? Modi a
-                            perferendis
-                            omnis mollitia incidunt atque dicta, consequuntur sunt, accusantium.
-                        </p>
-                    </div>
+                        @{
+                        foreach(var q in answers)
+                        {
+                            <partial name = "AnswerPartialView" model = "@q"/>
+                        }
+                    }
                     <div class="timeline-comment-box">
                         <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div>
                         <div class="input">
-                            <form action="">
+                            <form method= "post">
                                 <div class="input-group">
-                                    <input type="text" class="form-control rounded-corner"
+                                    <input type="text" id = "answertxt" class="form-control rounded-corner"
                                         placeholder="Write your answer">
                                     <span class="input-group-btn p-l-10">
-                                        <button class="btn btn-primary f-s-12 rounded-corner"
+                                        <button id = "postbtn" class="btn btn-primary f-s-12 rounded-corner"
                                             type="button">Answer</button>
                                     </span>
                                 </div>

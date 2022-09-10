@@ -30,6 +30,10 @@ namespace HOW.Controllers
             {
                 if (HelperRepositry.ValidateHelper(l))
                 {
+                    SessionManagement.currentUserEmail = l.Email;
+                    SessionManagement session = new SessionManagement();
+                    session.Remove(HttpContext);
+                    session.SetSession(HttpContext);
                     return RedirectToAction("Index", "Home");
                 }
                 else return View("Error", "Please Enter Valid Credentials");
@@ -47,6 +51,10 @@ namespace HOW.Controllers
             {
                 if (SeekerRepositry.ValidateSeeker(l))
                 {
+                    SessionManagement.currentUserEmail = l.Email;
+                    SessionManagement session = new SessionManagement();
+                    session.Remove(HttpContext);
+                    session.SetSession(HttpContext);
                     return RedirectToAction("Index", "Home");
                 }
                 return View("Error", "Please Enter Valid Credentials");

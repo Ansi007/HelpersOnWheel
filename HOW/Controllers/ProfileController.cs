@@ -7,10 +7,12 @@ namespace HOW.Controllers
     {
         public IActionResult Timeline()
         {
+            if (SessionManagement.currentUserEmail == "") return RedirectToAction("Index", "Home");
             return View();
         }
         public IActionResult Edit()
         {
+            if (SessionManagement.currentUserEmail == "") return RedirectToAction("Index", "Home");
             return View();
         }
 
@@ -18,9 +20,16 @@ namespace HOW.Controllers
         public IActionResult Question(Question question)
         {
             QuestionRepository questionRepository = new QuestionRepository();
-            question.AuthorEmail = "annsshahbaz@gmail.com";
+            question.AuthorEmail = SessionManagement.currentUserEmail;
             questionRepository.AddQuestion(question);
             return View("Timeline");
+        }
+        public IActionResult Logout()
+        {
+            if (SessionManagement.currentUserEmail == "") return RedirectToAction("Index", "Home");
+            SessionManagement session = new SessionManagement();
+            session.Logout(HttpContext);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

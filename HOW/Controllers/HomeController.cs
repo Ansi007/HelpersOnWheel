@@ -8,9 +8,8 @@ namespace HOW.Controllers
     {
         public ViewResult Index()
         {
-            //DataLists lists = new DataLists();
-            //lists.helpers = HelperRepositry.GetHelpers();
-            //lists.seekers = SeekerRepositry.GetSeekers();
+            SessionManagement session = new SessionManagement();
+            session.GetSession(HttpContext);
             return View();
         }
     }

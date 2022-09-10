@@ -28,6 +28,7 @@ namespace HOW.Models
             {
                 if(h.Email == l.Email && h.Password == l.Password)
                 {
+                    SessionManagement.currentUserName = h.FirstName + " " + h.LastName;
                     return true;
                 }
             }

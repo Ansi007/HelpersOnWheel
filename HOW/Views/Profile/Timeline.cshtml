@@ -4,7 +4,7 @@
 
 @{
     ViewData["Title"] = "Profile Timeline";
-    List<Question> questions = new QuestionRepository().GetQuestions("annsshahbaz@gmail.com");
+    List<Question> questions = new QuestionRepository().GetQuestions(SessionManagement.currentUserEmail);
 }
 
 @section HomeCss {
@@ -16,7 +16,7 @@
         <div class="panel profile-cover">
             <div class="profile-cover__img">
                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                <h3 class="h3">John Doe</h3>
+                <h3 class="h3">@SessionManagement.currentUserName</h3>
             </div>
             <div class="profile-cover__action bg--img" data-overlay="0.3">
                 <a class="btn btn-rounded btn-info" asp-action="Edit">
