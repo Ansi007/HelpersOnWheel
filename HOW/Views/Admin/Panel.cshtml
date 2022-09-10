@@ -1,0 +1,29 @@
+﻿@using HOW
+@using HOW.Models
+
+@{
+    ViewData["Title"] = "Admin";
+    List <Question> questions = new QuestionRepository().GetQuestions();
+}
+
+@section HomeCss {
+    <link href="~/CSS/home.css" rel="Stylesheet" type="text/css" />
+}
+
+<br />
+<div class="container m-auto col-xl-8 col-lg-8 col-md-6">
+    <div class="col-lg-18">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">New Activity</h3>
+            </div>
+            <div class="panel-content panel-activity">
+                <ul class="panel-activity__list">
+                    @foreach(Question q in questions) {
+                        <partial name="AdminPartialView" model="@q"/>
+                    }
+               </ul>
+            </div>
+        </div>
+    </div>
+</div>

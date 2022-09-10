@@ -17,9 +17,17 @@
             return context.SaveChanges();
         }
 
-        public int DeleteQuestion(Question question)
+        public int DeleteQuestion(Question q)
         {
-            return 0;
+            var context = new HelpersOnWheelContext();
+            foreach (var a in context.Questions)
+            {
+                if (a.Title == q.Title)
+                {
+                    context.Questions.Remove(a);
+                }
+            }
+            return context.SaveChanges();
         }
 
         public List<Question> GetQuestions()
