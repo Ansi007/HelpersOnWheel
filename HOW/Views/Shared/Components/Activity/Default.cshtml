@@ -1,0 +1,29 @@
+﻿@using HOW.Models;
+@model Question
+
+<li>
+    <i class="activity__list__icon fa fa-question-circle-o"></i>
+    <div class="activity__list__header">
+        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
+        <form method="post" asp-controller="Post" asp-action="Index">
+            <input class="d-none" asp-for="AuthorEmail" value="@ViewData["AuthorEmail"]"/>
+            <input class="d-none" asp-for="Title" value="@ViewData["Title"]"/>
+            <input class="d-none" asp-for="Description" value="@ViewData["Description"]"/>
+            <input class="d-none" asp-for="Answers" value="@ViewData["Answers"]"/>
+            <a asp-controller="Profile" asp-action="Timeline" >@ViewData["AuthorEmail"]</a> Asked for help: <button style = "    border: none;
+    background-color: #fff;
+    color: #222;
+    font-weight: 600;" id = "questionButton" type="submit">@ViewData["Title"]
+            </button>
+            </form>
+    </div>
+    <div class="activity__list__body entry-content">
+        <p>
+            @ViewData["Description"]
+        </p>
+    </div>
+    <div class="activity__list__footer">
+        <a asp-controller="Post" asp-action="Index"> <i class="fa fa-comments"></i>23</a>
+        <span> <i class="fa fa-clock"></i>2 hours ago</span>
+    </div>
+</li>

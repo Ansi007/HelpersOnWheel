@@ -51,5 +51,17 @@ namespace HOW.Controllers
             }
             else return View();
         }
+
+        public string EmailAvailableSeeker(String email)
+        {
+            SeekerRepositry seekerRepositry = new SeekerRepositry();
+            return seekerRepositry.ValidateEmail(email);
+        }
+
+        public string EmailAvailableHelper(String email)
+        {
+            HelperRepositry helperRepositry = new HelperRepositry();
+            return helperRepositry.ValidateEmail(email);
+        }
     }
 }

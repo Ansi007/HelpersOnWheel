@@ -10,7 +10,6 @@
 @section HomeCss {
 <link href="~/CSS/home.css" rel="Stylesheet" type="text/css" />
 }
-
 <br />
 <div class="container m-auto col-xl-8 col-lg-8 col-md-6">
     <div class="col-lg-18">
@@ -24,10 +23,10 @@
                     <i class="fa fa-comment"></i>
                     <span>Edit Profile</span>
                 </a>
-                <button class="btn btn-rounded btn-info">
+@*                <button class="btn btn-rounded btn-info">
                     <i class="fa fa-comment"></i>
                     <span>Message</span>
-                </button>
+                </button>*@
             </div>
             <div class="profile-cover__info">
                 <ul class="nav">
@@ -39,33 +38,34 @@
             <div class="panel-heading">
                 <h3 class="panel-title">SEEK ACTIVITY</h3>
             </div>
+            <div id = "warningDiv" class="text-danger"></div>
             <div class="panel-content panel-activity">
                 <form method="post" asp-controller="Profile" asp-action="Question" class="panel-activity__status">
                     <span asp-validation-for="Title"></span>
-                    <input asp-for="Title" placeholder="Title of your Request" class="form-control">
+                    <input asp-for="Title" placeholder="Title of your Request" class="form-control"id= "titleInput">
                     <span asp-validation-for="Description"></span>
-                    <textarea asp-for = "Description" placeholder="Description of your Request"
-                        class="form-control"></textarea>
+                    <textarea asp-for = "Description" placeholder = "Description of your Request"
+                        class="form-control" id = "descriptionInput"></textarea>
                     <div class="actions">
                         <div class="btn-group">
-                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                            <button type="button" class="btn-link" title = "" data-toggle="tooltip"
                                 data-original-title="Post an Image">
                                 <i class="fa fa-image"></i>
                             </button>
-                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                            <button type="button" class="btn-link" title = "" data-toggle="tooltip"
                                 data-original-title="Post an Video">
                                 <i class="fa fa-video-camera"></i>
                             </button>
-                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                            <button type="button" class="btn-link" title = "" data-toggle="tooltip"
                                 data-original-title="Post an Idea">
                                 <i class="fa fa-lightbulb-o"></i>
                             </button>
-                            <button type="button" class="btn-link" title="" data-toggle="tooltip"
+                            <button type="button" class="btn-link" title = "" data-toggle="tooltip"
                                 data-original-title="Post an Question">
                                 <i class="fa fa-question-circle-o"></i>
                             </button>
                         </div>
-                        <button type="submit" class="btn btn-sm btn-rounded btn-info">
+                        <button type="submit" class="btn btn-sm btn-rounded btn-info" id = "postSubmit">
                             Seek Help
                         </button>
                     </div>
