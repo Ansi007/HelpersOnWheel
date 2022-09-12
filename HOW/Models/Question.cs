@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HOW.Models
 {
-    public partial class Question
+    public partial class Question : Audit
     {
         public Question()
         {

@@ -39,5 +39,21 @@
             var context = new HelpersOnWheelContext();
             return context.Questions.Select(q => q).Where(q => q.AuthorEmail == Email).ToList();
         }
+
+        public List<Question> SearchQuesions(string name, string title)
+        {
+            if (name == null) name = "";
+            if (title == null) title = "";
+            var context = new HelpersOnWheelContext();
+            List<Question> question = new List<Question>();
+            foreach (var q in context.Questions)
+            {
+                if(q.AuthorEmail.Contains(name) && q.Title.Contains(title))
+                {
+                    question.Add(q);
+                }
+            }
+            return question;
+        }
     }
 }

@@ -1,0 +1,51 @@
+﻿@using HOW
+@using HOW.Models
+
+@{
+    ViewData["Title"] = "Seacrch";
+}
+
+@section HomeCss {
+    <link href="~/CSS/home.css" rel="Stylesheet" type="text/css" />
+}
+
+<script>
+
+$(document).ready(function () {
+    $("#searchbtn").click(function () {
+        const name1 = $("#name").val();
+        const title1 = $("#title").val();
+        var scntDiv = $('#searchresult');
+        scntDiv.find("tr:gt(0)").remove();
+        $.get("/Search/Find", {name: name1, title: title1}, function(result) {
+            for (let i = 0; i < result.length; i++) {
+                scntDiv.append("<tr>" + "<td>" + result[i].authorEmail + "</td>" + "<td>" + result[i].title + "</td>" + "<td>" + result[i].description + "</td>" + "</tr>");   
+            }
+        });
+    });
+});
+
+//"<tr>" + "<td>" + result[i].authorEmail + "</td>" + "<td>" + result[i].title + "</td>" + "<td>" + result[i].description + "</td>" + "</tr>"
+</script>
+
+<div class="form-inline my-2 my-lg-0">
+      <input id = "name" class="form-control mr-sm-2" type="text" placeholder="Name of Person Who Posted the Question" aria-label="Search">
+      <input id = "title" class="form-control mr-sm-2" type="text" placeholder="Title of the post" aria-label= "Search">
+      <button id = "searchbtn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+</div>
+<br />
+<div class="container m-auto col-xl-8 col-lg-8 col-md-6">
+    <div class="col-lg-18">
+        <div>
+            <table border="1">
+                <tbody id="searchresult">
+                    <tr>
+                    <td>Author</td>
+                    <td>Title</td>
+                    <td>Description</td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br />

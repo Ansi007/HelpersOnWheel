@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HOW.Models
 {
-    public partial class Helper
+    public partial class Helper : Audit
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "LastName is required")]

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
 namespace HOW.Models
 {
-    public partial class Answer
+    public partial class Answer : Audit
     {
         public int Id { get; set; }
         public string AuthorEmail { get; set; } = null!;

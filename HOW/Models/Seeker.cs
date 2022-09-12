@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using HOW.Models;
 
 namespace HOW
 {
-    public partial class Seeker
+    public partial class Seeker : Audit
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "LastName is required")]

@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Net.Mail;
+using HOW.Migrations;
 
 namespace HOW.Models
 {

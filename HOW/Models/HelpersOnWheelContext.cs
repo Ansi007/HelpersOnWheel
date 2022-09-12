@@ -163,5 +163,27 @@ namespace HOW
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        public override int SaveChanges()
+        {
+            var tracker = ChangeTracker;
+
+            foreach (var item in tracker.Entries().Where(e => e.Entity is Audit))
+            {
+
+                var entity = item.Entity as Audit;
+                switch (item.State)
+                {
+                    case EntityState.Added:
+                        entity.CreatedDate = DateTime.Now;
+                        entity.CreatedBy = "admin";
+                        break;
+                    case EntityState.Modified:
+                        entity.ModifiedDate = DateTime.Now;
+                        entity.CreatedBy = "admin";
+                        break;
+                }
+            }
+            return base.SaveChanges();
+        }
     }
 }
