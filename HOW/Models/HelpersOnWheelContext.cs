@@ -175,11 +175,11 @@ namespace HOW
                 {
                     case EntityState.Added:
                         entity.CreatedDate = DateTime.Now;
-                        entity.CreatedBy = "admin";
+                        entity.CreatedBy = SessionManagement.currentUserEmail;
                         break;
                     case EntityState.Modified:
                         entity.ModifiedDate = DateTime.Now;
-                        entity.CreatedBy = "admin";
+                        entity.CreatedBy = SessionManagement.currentUserEmail;
                         break;
                 }
             }

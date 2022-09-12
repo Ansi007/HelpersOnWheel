@@ -1,6 +1,7 @@
-﻿namespace HOW.Models
+﻿using HOW.Models.Interfaces;
+namespace HOW.Models
 {
-    public class QuestionRepository
+    public class QuestionRepository : IQuestionRepository
     {
         public int AddQuestion(Question question)
         {

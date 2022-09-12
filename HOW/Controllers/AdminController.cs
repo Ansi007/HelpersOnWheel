@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HOW.Models;
+using HOW.Models.Interfaces;
 
 namespace HOW.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly ILogger<AdminController> _logger;
+        private readonly IQuestionRepository _questionRepository;
+        public AdminController(ILogger<AdminController> logger, IQuestionRepository e)
+        {
+            _logger = logger;
+            _questionRepository = e;
+        }
         public IActionResult Index()
         {
             return View();
@@ -26,8 +34,7 @@ namespace HOW.Controllers
 
         public IActionResult Remove(Question q)
         {
-            QuestionRepository qr = new QuestionRepository();
-            qr.DeleteQuestion(q);
+            _questionRepository.DeleteQuestion(q);
             return View("Panel");
         }
     }

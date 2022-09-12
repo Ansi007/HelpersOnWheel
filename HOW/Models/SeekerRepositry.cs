@@ -1,25 +1,25 @@
 ﻿using System.Data.SqlClient;
 using System.Net.Mail;
 using HOW.Migrations;
+using HOW.Models.Interfaces;
 
 namespace HOW.Models
 {
-    public class SeekerRepositry
+    public class SeekerRepositry : ISeekerRepository
     {
-        //static string connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HelpersOnWheel;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        static public int AddSeeker(Seeker s)
+        public int AddSeeker(Seeker s)
         {
             var context = new HelpersOnWheelContext();
             context.Seekers.Add(s);
             return context.SaveChanges();
         }
-        static public List<Seeker> GetSeekers()
+        public List<Seeker> GetSeekers()
         {
             var context = new HelpersOnWheelContext();
             return context.Seekers.ToList();
         }
 
-        static public bool ValidateSeeker(Login l)
+        public bool ValidateSeeker(Login l)
         {
             var context = new HelpersOnWheelContext();
             foreach(Seeker seeker in context.Seekers)

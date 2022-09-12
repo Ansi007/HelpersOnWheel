@@ -1,6 +1,8 @@
-﻿namespace HOW.Models
+﻿using HOW.Models.Interfaces;
+
+namespace HOW.Models
 {
-    public class AnswerRepository
+    public class AnswerRepository : IAnswerRepository
     {
         public int AddAnswer(string email, string title, Answer answer)
         {

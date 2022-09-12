@@ -1,10 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HOW.Models;
+using HOW.Models.Interfaces;
 
 namespace HOW.Controllers
 {
     public class SignUpController : Controller
     {
+        private readonly ILogger<SignUpController> _logger;
+        private readonly IHelperRepository _helperRepository;
+        private readonly ISeekerRepository _seekerRepository;
+
+
+        public SignUpController(ILogger<SignUpController> logger, IHelperRepository e, ISeekerRepository seekerRepository)
+        {
+            _logger = logger;
+            _helperRepository = e;
+            _seekerRepository = seekerRepository;
+        }
+
         [HttpGet]
         [Route("/SignUp/SeekerSignUp", Name = "signupseeker")]
         public ViewResult SeekerSignUp()
@@ -17,7 +30,7 @@ namespace HOW.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (SeekerRepositry.AddSeeker(seeker) > 0)
+                if (_seekerRepository.AddSeeker(seeker) > 0)
                 {
                     return RedirectToAction("SeekerLogin", "Login");
                 }
@@ -40,7 +53,7 @@ namespace HOW.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (HelperRepositry.AddHelper(helper) > 0)
+                if (_helperRepository.AddHelper(helper) > 0)
                 {
                     return RedirectToAction("HelperLogin", "Login");
                 }
@@ -54,14 +67,12 @@ namespace HOW.Controllers
 
         public string EmailAvailableSeeker(String email)
         {
-            SeekerRepositry seekerRepositry = new SeekerRepositry();
-            return seekerRepositry.ValidateEmail(email);
+            return _seekerRepository.ValidateEmail(email);
         }
 
         public string EmailAvailableHelper(String email)
         {
-            HelperRepositry helperRepositry = new HelperRepositry();
-            return helperRepositry.ValidateEmail(email);
+            return _helperRepository.ValidateEmail(email);
         }
     }
 }

@@ -1,17 +1,18 @@
 ﻿using System.Data.SqlClient;
 using System.Net.Mail;
+using HOW.Models.Interfaces;
 
 namespace HOW.Models
 {
-    public class HelperRepositry
+    public class HelperRepositry : IHelperRepository
     {
-        static public int AddHelper(Helper h)
+        public int AddHelper(Helper h)
         {
             var context = new HelpersOnWheelContext();
             context.Helpers.Add(h);
             return context.SaveChanges();
         }
-        static public List<Helper> GetHelpers()
+        public List<Helper> GetHelpers()
         {
             List<Helper> helpers = new List<Helper>();
             var context = new HelpersOnWheelContext();
@@ -21,7 +22,7 @@ namespace HOW.Models
             }
             return helpers;
         }
-        static public bool ValidateHelper(Login l)
+        public bool ValidateHelper(Login l)
         {
             var context = new HelpersOnWheelContext();
             foreach(Helper h in context.Helpers)

@@ -1,12 +1,24 @@
+using HOW.Models.Interfaces;
+using HOW.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IAnswerRepository, AnswerRepository>();
+builder.Services.AddSingleton<IHelperRepository, HelperRepositry>();
+builder.Services.AddSingleton<IQuestionRepository, QuestionRepository>();
+builder.Services.AddSingleton<ISeekerRepository, SeekerRepositry>();
+
 builder.Services.AddDistributedMemoryCache();//New
 builder.Services.AddSession(option =>
 {
     option.IdleTimeout = TimeSpan.FromMinutes(500);
-});//New
+});
+
+
+
+//New
 /*
  option =>
 {

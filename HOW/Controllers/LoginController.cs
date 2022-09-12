@@ -1,10 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HOW.Models;
+using HOW.Models.Interfaces;
 
 namespace HOW.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly ILogger<LoginController> _logger;
+        private readonly IHelperRepository _helperRepository;
+        private readonly ISeekerRepository _seekerRepository;
+
+        public LoginController(ILogger<LoginController> logger, IHelperRepository e, ISeekerRepository seekerRepository)
+        {
+            _logger = logger;
+            _helperRepository = e;
+            _seekerRepository = seekerRepository;
+        }
         [HttpGet]
         public ViewResult HelperLogin()
         {
@@ -26,9 +37,10 @@ namespace HOW.Controllers
         [HttpPost]
         public IActionResult HelperLogin(Login l)
         {
+
             if (ModelState.IsValid)
             {
-                if (HelperRepositry.ValidateHelper(l))
+                if (_helperRepository.ValidateHelper(l))
                 {
                     SessionManagement.currentUserEmail = l.Email;
                     SessionManagement session = new SessionManagement();
@@ -49,7 +61,7 @@ namespace HOW.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (SeekerRepositry.ValidateSeeker(l))
+                if (_seekerRepository.ValidateSeeker(l))
                 {
                     SessionManagement.currentUserEmail = l.Email;
                     SessionManagement session = new SessionManagement();

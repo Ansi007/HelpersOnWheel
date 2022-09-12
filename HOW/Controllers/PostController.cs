@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HOW.Models;
+using HOW.Models.Interfaces;
 
 namespace HOW.Controllers
 {
     public class PostController : Controller
     {
+        private readonly ILogger<PostController> _logger;
+        private readonly IAnswerRepository _answerRepository;
+        public PostController(ILogger<PostController> logger, IAnswerRepository e)
+        {
+            _logger = logger;
+            _answerRepository = e;
+        }
         static string email, title;
         public IActionResult Index(Question q)
         {
@@ -23,8 +31,7 @@ namespace HOW.Controllers
             ans.AuthorEmail = SessionManagement.currentUserEmail;
             ans.Title = "Answer";
             ans.Description = answer;
-            AnswerRepository answerRepository = new AnswerRepository();
-            answerRepository.AddAnswer(email, title, ans);
+            _answerRepository.AddAnswer(email, title, ans);
             return View();
         }
     }

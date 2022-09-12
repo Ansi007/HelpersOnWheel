@@ -10,6 +10,7 @@
     $("#postbtn").click(function () {
         const answer1 = $("#answertxt").val();
         $.post("/Post/Answer", {answer: answer1}, function() {
+            location.reload(true);
         });
     });
 });
